@@ -25,6 +25,7 @@ function createTreeView(data, depth = 0){
     if(data.hasOwnProperty(key)){
       const value = data[key];
       const indent = ' '.repeat(depth*2);
+      console.log(key);
       result += `${indent}"${key}": `;
 
       if(typeof value === 'object' && value !== null){
@@ -120,13 +121,13 @@ function jsonToXml(jsonData, rootName = 'root'){
           xml += `${value}`;
         }
         xml += `</${key}>\n`;
-      }
+      } 
     }
   };
 
   xml += `<?xml version="1.0" encoding="UTF-8"?>\n<${rootName}>\n`;
   parseObject(jsonData, '  ');
-  xml += `</${rootName}>\n`;
+  xml += `</${rootName}>\n`;  
 
   return xml;
 }

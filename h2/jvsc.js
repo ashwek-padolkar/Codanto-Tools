@@ -5,7 +5,7 @@ const output = document.querySelector(".output");
 function generateTree(){
   const jsonData = input.value;
   try{
-    const parsedData = JSON.parse(jsonData);             // the JSON string (here, jsonData) is converted(parsed) into a corresponding json format and if data is valid then it stores data in parsedData variable.
+    const parsedData = JSON.parse(jsonData);     // to convert/parse a JSON-formatted string (jsonData) into a JavaScript object (parsedData).
     const treeViewer = createTreeView(parsedData);
     output.value = treeViewer;
   } catch (error){

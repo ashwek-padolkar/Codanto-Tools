@@ -14,6 +14,7 @@ btnDownload.addEventListener("click", () => {
         .then(blob => {
             const blobURL = URL.createObjectURL(blob);  // Creates a temporary URL for the Blob.
 
+            // Purpose of Creating <a> Element: Browsers use <a> elements with the download attribute to trigger file downloads.
             const downloadLink = document.createElement('a');   // <a> tag is created and its href and download attributes are set.
             downloadLink.href = blobURL;
             downloadLink.download = 'image.png'; // Set the desired file name and extension.
