@@ -25,7 +25,6 @@ function createTreeView(data, depth = 0){
     if(data.hasOwnProperty(key)){
       const value = data[key];
       const indent = ' '.repeat(depth*2);
-      console.log(key);
       result += `${indent}"${key}": `;
 
       if(typeof value === 'object' && value !== null){

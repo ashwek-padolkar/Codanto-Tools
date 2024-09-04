@@ -37,7 +37,7 @@ function createTreeView(data, depth = 0) {
 }
 
 
-// 2. Beautify
+// 2. Beautify (directly, using JSON.stringify() method that takes 'spaces' parameter)
 const btnBeautify = document.querySelector(".beautify");
 const space = document.querySelector(".space");
 
@@ -52,7 +52,7 @@ function beautify() {
 }
 
 
-// 3. Minify
+// 3. Minify (directly, using JSON.stringify() method that automatically removes unnecessary whitespace and formatting)
 const btnMinify = document.querySelector(".minify");
 
 btnMinify.addEventListener("click", () => {
